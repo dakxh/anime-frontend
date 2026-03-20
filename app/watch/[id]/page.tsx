@@ -243,12 +243,12 @@ export default async function WatchPage(props: {
                 <div className="mb-8 flex flex-col gap-2">
                   <Link 
                     href={`/watch/${id}`} 
-                    className="text-neutral-500 hover:text-white font-mono text-xs tracking-widest uppercase mb-2 w-fit"
+                    className="text-neutral-200 hover:text-white font-mono text-xs tracking-widest uppercase mb-2 w-fit"
                   >
                     ← Back to Seasons
                   </Link>
-                  <h2 className="text-xl md:text-2xl font-bold tracking-wide text-neutral-200 uppercase">
-                    {data.title} <span className="text-neutral-600 mx-2">•</span> <span className="text-neutral-400">Season {activeSeason}</span>
+                  <h2 className="text-xl md:text-2xl font-bold tracking-wide text-neutral-400 uppercase">
+                    {data.title} <span className="text-neutral-600 mx-2">•</span> <span className="text-neutral-100">Season {activeSeason}</span>
                   </h2>
                 </div>
 
@@ -264,7 +264,7 @@ export default async function WatchPage(props: {
                       <Link
                         key={`${ep.season_number}-${ep.episode_number}`}
                         href={`/watch/${id}/play?metaUrl=${encodeURIComponent(episodeMetaUrl)}`}
-                        className="flex items-center justify-between p-4 bg-neutral-900/40 border border-neutral-800 hover:border-neutral-500 rounded-xl transition-all duration-200 group hover:bg-neutral-900/80 hover:translate-x-1"
+                        className="flex items-center justify-between p-4 bg-neutral-900/40 rounded-xl transition-all duration-100 group hover:bg-neutral-900 hover:translate-x-2"
                       >
                         <span className="text-base font-medium text-neutral-300 group-hover:text-white flex items-center gap-4">
                           <span className="text-neutral-600 font-mono text-sm bg-black px-2 py-1 rounded-md">
@@ -273,7 +273,7 @@ export default async function WatchPage(props: {
                           {ep.episode_name}
                         </span>
 
-                        <span className="text-[10px] font-mono text-neutral-500 uppercase border border-neutral-800 bg-black px-2 py-1 rounded-md group-hover:border-neutral-600">
+                        <span className="text-[10px] font-mono text-neutral-500 uppercase bg-black px-2 py-1 rounded-md group-hover:border-neutral-600">
                           {ep.quality || '1080p'}
                         </span>
                       </Link>
